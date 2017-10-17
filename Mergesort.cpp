@@ -12,12 +12,12 @@ void msort(int a[], int x[], int s, int e) {
 		int c = m+1;
 		int t = s;
 	    	while(j < m+1 && c < e){
-			if(a[j]>=a[c]) x[t++] = a[c++];
-			else x[t++]=a[j++];
+			if(a[j] >= a[c]) x[t++] = a[c++];
+			else x[t++] = a[j++];
 	   	 }
 	   	 while(j < m+1) x[t++] = a[j++];
 	    	while(c < e) x[t++] = a[c++];
-	    	for(int q=s;q < e;q++) a[q] = x[q];
+	    	for(int q = s; q < e; q++) a[q] = x[q];
 	}
 }
 
@@ -51,9 +51,6 @@ int main(int argc, char * args[]) {
 	int e [0];
 	mergesort (e, 0);
 	assert (sorted (e, 0));
-	int f[]={10};
-	mergesort (f, 0);
-	assert (sorted (f, 0));
   
 	cout << "All tests passed." << endl;    
 }
